@@ -9,10 +9,84 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<script>(function(){try{var t=localStorage.getItem('inkatraces-panel-theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
 </head>
 <body>
-<p>Cargando panel…</p>
-<p><a href="https://inkatraces.com/">inkatraces.com</a></p>
-<script>location.replace('./app.html')</script>
-</body>
-</html>
+<div class="wrap">
+<header>
+  <div class="row" style="margin-bottom:18px">
+    <a class="brand" href="https://inkatraces.com/" target="_blank" rel="noopener">
+      <svg class="mark" viewBox="0 0 64 64" aria-hidden="true"><path fill="var(--gold)" d="M10 50V22.4L24.4 18l6.8 10.8L41.6 18 54 22.4V50H45.6V35.6L33.2 44l-8.4-8.4V50H10z"/></svg>
+      <span><b>InkaTraces</b><em>Perú a tu medida</em></span>
+    </a>
+    <div class="row">
+      <span class="pill">Verificación · 2026-09-22 · Lima</span>
+      <button type="button" class="btn" id="btn-theme">Tema oscuro</button>
+    </div>
+  </div>
+  <div class="chips"><span class="chip">Cliente</span><span class="chip">inkatraces.com</span><span class="chip">SEO · GEO · Medición</span></div>
+  <div class="rule">
+    <h1>Avances de su sitio web</h1>
+    <p class="lead">Cómo aparece InkaTraces en Google, cómo lo leen los asistentes de IA y qué falta conectar en Search Console y etiquetas.</p>
+  </div>
+  <div class="meta">
+    <div class="card"><strong>Marca</strong>InkaTraces</div>
+    <div class="card"><strong>Sitio</strong>inkatraces.com</div>
+    <div class="card"><strong>Enfoque</strong>SEO · GEO · GSC</div>
+    <div class="card"><strong>Fuente</strong>Auditoría 2026-09-22</div>
+  </div>
+  <div class="pillars" id="pilares">
+    <article class="card"><kbd>SEO</kbd><h2>Buscadores</h2><p>Mapa del sitio, títulos, fichas e indexación.</p><p class="lead" id="c-seo" style="margin-top:10px;font-weight:600;color:var(--gold)"></p></article>
+    <article class="card"><kbd>GEO</kbd><h2>Asistentes de IA</h2><p>Guía pública y contenido que la IA pueda citar.</p><p class="lead" id="c-geo" style="margin-top:10px;font-weight:600;color:var(--gold)"></p></article>
+    <article class="card"><kbd>Medición</kbd><h2>Google</h2><p>Search Console, vista al compartir y etiquetas.</p><p class="lead" id="c-measure" style="margin-top:10px;font-weight:600;color:var(--gold)"></p></article>
+  </div>
+  <div class="progress">
+    <div class="row"><h2>Progreso de mejoras</h2><span style="color:var(--gold);font-weight:600"><span id="progress-num">0</span>/13</span></div>
+    <div class="bar" id="progress-bar"><i id="progress-fill"></i></div>
+    <div class="row" style="margin-top:10px"><button type="button" class="btn" id="btn-reset">Restablecer progreso</button></div>
+  </div>
+</header>
+<nav class="toc">
+  <a href="#resumen">Resumen</a><a href="#pilares">Pilares</a><a href="#bien">Lo bueno</a>
+  <a href="#confirmar">Por confirmar</a><a href="#medicion">Medición</a>
+  <a href="#mejoras">Mejoras</a><a href="#proximos">Pasos</a><a href="#historial">Historial</a>
+</nav>
+<section id="resumen" class="exec">
+  <h2 class="sec">Resumen ejecutivo</h2>
+  <p class="intro"><strong>Base sólida:</strong> títulos, catálogo, FAQ, contacto y RUC.</p>
+  <p class="intro"><strong>Prioridades:</strong> sitemap (SEO), guía IA (GEO) y Search Console.</p>
+</section>
+<section id="bien"><h2 class="sec">A · Lo que ya está bien <span class="count">8</span></h2><div id="done-list"></div></section>
+<section id="confirmar"><h2 class="sec">B · Por confirmar <span class="count">5</span></h2><div id="confirm-list"></div></section>
+<section id="medicion"><h2 class="sec">Google · Medición</h2>
+<div class="pillars" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr))">
+<article class="card"><h2>Search Console</h2><p>Cobertura, consultas e indexación.</p></article>
+<article class="card"><h2>GTM / GA4</h2><p>Formularios y WhatsApp.</p></article>
+<article class="card"><h2>PageSpeed</h2><p>Core Web Vitals.</p></article>
+<article class="card"><h2>Vista al compartir</h2><p>Título, descripción e imagen.</p></article>
+</div></section>
+<section id="mejoras"><h2 class="sec">C · Mejoras en curso <span class="count">13</span></h2>
+<div class="filters">
+<button class="btn gold" data-filter="all">Todas</button>
+<button class="btn" data-filter="seo">SEO</button>
+<button class="btn" data-filter="geo">GEO</button>
+<button class="btn" data-filter="measure">Medición</button>
+</div>
+<div id="improve-list"></div></section>
+<section id="proximos"><h2 class="sec">D · Próximos pasos</h2>
+<ol class="steps">
+<li><strong>Arreglar el mapa del sitio</strong><span>Reenviarlo a Google.</span></li>
+<li><strong>Corregir fichas de tour</strong><span>Incluido / no incluido y días.</span></li>
+<li><strong>Guía para IA y schema</strong><span>Marca, FAQ y experiencias.</span></li>
+<li><strong>Icono + frase + OG</strong><span>Navegador y redes.</span></li>
+<li><strong>Aceleración + seguridad</strong><span>Velocidad y cabeceras.</span></li>
+<li><strong>Limpieza + zona horaria Perú</strong><span>Páginas temporales.</span></li>
+</ol></section>
+<section id="historial"><h2 class="sec">E · Historial</h2>
+<div class="hist"><p id="history-empty" class="intro">Aún no hay ajustes marcados.</p><ol id="history-list"></ol></div>
+</section>
+<footer><p>InkaTraces · Panel de avances · 2026-09-22 Lima</p></footer>
+</div>
+<script src="app.js"></script>
+</body></html>
